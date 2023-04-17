@@ -1,0 +1,6 @@
+/osmosis-swap-filter
+/nats.creds
+/start.sh
+.DS_Store
+/.env
+/coverage.out
