@@ -1,4 +1,4 @@
-module gitlab.com/syntropynet/amberdm/publisher/osmosis-swap-filter
+module github.com/SyntropyNet/dm-sdk-go
 
 go 1.18
 
