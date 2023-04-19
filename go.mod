@@ -1,9 +1,8 @@
-module github.com/SyntropyNet/pubsub-go/pubsub
+module github.com/SyntropyNet/pubsub-go
 
 go 1.19
 
 require (
-	github.com/nats-io/nats-server/v2 v2.9.15
 	github.com/nats-io/nats.go v1.24.0
 )
 
