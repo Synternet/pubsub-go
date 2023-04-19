@@ -1,4 +1,4 @@
-module github.com/SyntropyNet/dm-sdk-go/pubsub
+module github.com/SyntropyNet/pubsub-go/pubsub
 
 go 1.18
 
