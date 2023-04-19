@@ -22,11 +22,11 @@ const (
 // It takes a context, the service instance, and the data (message) as input arguments.
 func RepublishData(ctx context.Context, service *pubsub.NatsService, data []byte) error {
 	log.Println("Received message on", exampleSubscribeSubject, "subject")
-	err := service.PublishAsJSON(ctx, examplePublishSubject, data)
+	err := service.Publish(ctx, examplePublishSubject, data)
 	if err != nil {
 		return err
 	}
-
+	log.Println("Published message on", examplePublishSubject, "subject")
 	return nil
 }
 

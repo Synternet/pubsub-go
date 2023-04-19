@@ -34,21 +34,22 @@ import (
 )
 
 const (
-	NatsUrl                  = "nats://127.0.0.1:4222"
-	UserCredsJWT             = "USER_JWT"
-	UserCredsSeed            = "CREDS_SEED"
-	exampleSubscribeSubject  = "example.sub.subject"
-	examplePublishSubject    = "example.pub.subject"
+	NatsUrl                 = "nats://127.0.0.1:4222"
+	UserCredsJWT            = "USER_JWT"
+	UserCredsSeed           = "CREDS_SEED"
+	exampleSubscribeSubject = "example.sub.subject"
+	examplePublishSubject   = "example.pub.subject"
 )
 
 // RepublishData receives a message on a given subject and republishes it to another subject.
+// It takes a context, the service instance, and the data (message) as input arguments.
 func RepublishData(ctx context.Context, service *pubsub.NatsService, data []byte) error {
 	log.Println("Received message on", exampleSubscribeSubject, "subject")
-	err := service.PublishAsJSON(ctx, examplePublishSubject, data)
+	err := service.Publish(ctx, examplePublishSubject, data)
 	if err != nil {
 		return err
 	}
-
+	log.Println("Published message on", examplePublishSubject, "subject")
 	return nil
 }
 
