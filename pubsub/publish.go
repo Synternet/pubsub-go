@@ -6,8 +6,8 @@ import (
 )
 
 // Publish will publish a message of type []byte to a given subject.
-func (sn *NatsService) Publish(ctx context.Context, subject string, msg interface{}) error {
-	err := sn.nats.conn.Publish(subject, msg.([]byte))
+func (sn *NatsService) Publish(ctx context.Context, subject string, msg []byte) error {
+	err := sn.nats.conn.Publish(subject, msg)
 	if err != nil {
 		return err
 	}
