@@ -2,6 +2,7 @@ package pubsub
 
 import (
 	"context"
+	"errors"
 	"fmt"
 
 	"github.com/nats-io/nats.go"
@@ -34,11 +35,22 @@ func (sn *NatsService) unsubscribeHandlers() error {
 	return nil
 }
 
-func (sn *NatsService) subscribe(ctx context.Context, subject string, msgHandler Handler) (*nats.Subscription, error) {
-	return sn.nats.conn.Subscribe(subject, func(msg *nats.Msg) {
-		err := msgHandler(msg.Data)
-		if err != nil {
-			return
-		}
-	})
+func (sn *NatsService) subscribe(ctx context.Context, subject string, msgHandler any) (*nats.Subscription, error) {
+	switch handler := msgHandler.(type) {
+	case Handler:
+		return sn.nats.conn.Subscribe(subject, func(msg *nats.Msg) {
+			err := handler(msg.Data)
+			if err != nil {
+				return
+			}
+		})
+	case HandlerWithSubject:
+		return sn.nats.conn.Subscribe(subject, func(msg *nats.Msg) {
+			err := handler(msg.Data, msg.Subject)
+			if err != nil {
+				return
+			}
+		})
+	}
+	return nil, errors.New("invalid handler function")
 }

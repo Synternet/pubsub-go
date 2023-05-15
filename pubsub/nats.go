@@ -15,6 +15,7 @@ type NatsService struct {
 
 // Handler represents a function that takes a byte slice as input and returns an error.
 type Handler func([]byte) error
+type HandlerWithSubject func([]byte, string) error
 
 // Config is a struct that holds the configuration settings for connecting to the NATS server.
 type Config struct {
@@ -26,7 +27,7 @@ type Config struct {
 type natsConnection struct {
 	conn          *nats.Conn
 	subscriptions []*nats.Subscription
-	handlers      map[string]Handler
+	handlers      map[string]any
 	errorCh       <-chan error
 }
 
@@ -87,7 +88,7 @@ func newService(conn *nats.Conn, errorCh <-chan error) *NatsService {
 	return &NatsService{
 		nats: &natsConnection{
 			conn:     conn,
-			handlers: map[string]Handler{},
+			handlers: map[string]any{},
 			errorCh:  errorCh,
 		},
 	}
@@ -95,6 +96,17 @@ func newService(conn *nats.Conn, errorCh <-chan error) *NatsService {
 
 // AddHandler registers a new handler function for the given subject in the NatsService instance.
 func (sn *NatsService) AddHandler(subject string, handlerFn Handler) {
+	// Check if a handler with the same subject is already registered, and panic if it is
+	if _, ok := sn.nats.handlers[subject]; ok {
+		panic(fmt.Errorf("handler with subject %s already registered", subject))
+	}
+
+	// Register the handler function for the given subject
+	sn.nats.handlers[subject] = handlerFn
+}
+
+// AddHandlerWithSubject registers a new handler function that receives a subject for the given subject in the NatsService instance.
+func (sn *NatsService) AddHandlerWithSubject(subject string, handlerFn HandlerWithSubject) {
 	// Check if a handler with the same subject is already registered, and panic if it is
 	if _, ok := sn.nats.handlers[subject]; ok {
 		panic(fmt.Errorf("handler with subject %s already registered", subject))
