@@ -5,14 +5,16 @@ import (
 	"encoding/json"
 )
 
-func (sn *NatsService) Publish(ctx context.Context, subject string, msg interface{}) error {
-	err := sn.nats.conn.Publish(subject, msg.([]byte))
+// Publish will publish a message of type []byte to a given subject.
+func (sn *NatsService) Publish(ctx context.Context, subject string, msg []byte) error {
+	err := sn.nats.conn.Publish(subject, msg)
 	if err != nil {
 		return err
 	}
 	return nil
 }
 
+// Publish will publish a message of type any(must be marshallable to JSON) to a given subject.
 func (sn *NatsService) PublishAsJSON(ctx context.Context, subject string, msg interface{}) error {
 	var err error
 	jsonData, err := json.Marshal(msg)
