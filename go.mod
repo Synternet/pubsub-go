@@ -7,7 +7,6 @@ require (
 	github.com/nats-io/nats.go v1.24.0
 	github.com/nats-io/nkeys v0.4.4
 	github.com/stretchr/testify v1.8.2
-	gitlab.com/syntropynet/amberdm/sdk/pubsub-go/pubsub v0.0.0-20230515074233-c6511640c5ed
 )
 
 require (

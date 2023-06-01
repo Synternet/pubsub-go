@@ -12,7 +12,7 @@ import (
 
 const (
 	natsUrl                 = "nats://127.0.0.1"
-	natsUserSeed            = "SAAGNJOZTRPYYXG2NJX3ZNGXYUSDYX2BWO447W3SHG6XQ7U66RWHQ3JUXM"
+	accessToken             = "SAAGNJOZTRPYYXG2NJX3ZNGXYUSDYX2BWO447W3SHG6XQ7U66RWHQ3JUXM"
 	exampleSubscribeSubject = "example.sub.subject"
 )
 
@@ -24,11 +24,11 @@ func PrintData(ctx context.Context, service *pubsub.NatsService, data []byte) er
 }
 
 func main() {
-	jwt, _ := pubsub.CreateAppJwt(natsUserSeed)
+	jwt, _ := pubsub.CreateAppJwt(accessToken)
 	println(jwt)
 	// Set user credentials and options for NATS connection.
 	opts := []nats.Option{}
-	opts = append(opts, nats.UserJWTAndSeed(jwt, natsUserSeed))
+	opts = append(opts, nats.UserJWTAndSeed(jwt, accessToken))
 
 	// Connect to the NATS server using the provided options.
 	service := pubsub.MustConnect(

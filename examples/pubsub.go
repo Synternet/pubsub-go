@@ -13,7 +13,7 @@ import (
 const (
 	natsUrl                 = "nats://127.0.0.1:4222"
 	userCredsJWT            = "USER_JWT"
-	userCredsSeed           = "CREDS_SEED"
+	accessToken             = "SAAGNJOZTRPYYXG2NJX3ZNGXYUSDYX2BWO447W3SHG6XQ7U66RWHQ3JUXM"
 	exampleSubscribeSubject = "example.sub.subject"
 	examplePublishSubject   = "example.pub.subject"
 )
@@ -33,7 +33,7 @@ func RepublishData(ctx context.Context, service *pubsub.NatsService, data []byte
 func main() {
 	// Set user credentials and options for NATS connection.
 	opts := []nats.Option{}
-	opts = append(opts, nats.UserJWTAndSeed(userCredsJWT, userCredsSeed))
+	opts = append(opts, nats.UserJWTAndSeed(userCredsJWT, accessToken))
 
 	// Connect to the NATS server using the provided options.
 	service := pubsub.MustConnect(
