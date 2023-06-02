@@ -2,8 +2,8 @@ package main
 
 import (
 	"context"
+	"github.com/SyntropyNet/pubsub-go/pubsub"
 	"github.com/nats-io/nats.go"
-	"gitlab.com/syntropynet/amberdm/sdk/pubsub-go/pubsub"
 	"log"
 	"os"
 	"os/signal"

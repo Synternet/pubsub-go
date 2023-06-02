@@ -14,7 +14,7 @@
 To install the library, use the following command:
 
 ```bash
-go get -u gitlab.com/syntropynet/amberdm/sdk/pubsub-go
+go get -u github.com/SyntropyNet/pubsub-go/pubsub
 ```
 
 ## Usage
@@ -26,8 +26,8 @@ package main
 
 import (
 	"context"
+	"github.com/SyntropyNet/pubsub-go/pubsub"
 	"github.com/nats-io/nats.go"
-	"gitlab.com/syntropynet/amberdm/sdk/pubsub-go/pubsub"
 	"log"
 	"os"
 	"os/signal"

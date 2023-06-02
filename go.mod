@@ -1,4 +1,4 @@
-module gitlab.com/syntropynet/amberdm/sdk/pubsub-go
+module github.com/SyntropyNet/pubsub-go
 
 go 1.19
 

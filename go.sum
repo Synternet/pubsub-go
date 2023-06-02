@@ -1,3 +1,5 @@
+github.com/SyntropyNet/pubsub-go/pubsub v0.0.0-20230511083255-bd8690026403 h1:PNg6KxXRcRXGnG3M/rIIm9DgRoVxIGukbEP4wzgz1mQ=
+github.com/SyntropyNet/pubsub-go/pubsub v0.0.0-20230511083255-bd8690026403/go.mod h1:mhY3niEsREgP48ehRzqEtMAGmC2R+UDIlzvbbT699us=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
@@ -23,8 +25,6 @@ github.com/stretchr/testify v1.7.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/
 github.com/stretchr/testify v1.8.0/go.mod h1:yNjHg4UonilssWZ8iaSj1OCr/vHnekPRkoO+kdMU+MU=
 github.com/stretchr/testify v1.8.2 h1:+h33VjcLVPDHtOdpUCuF+7gSuG3yGIftsP1YvFihtJ8=
 github.com/stretchr/testify v1.8.2/go.mod h1:w2LPCIKwWwSfY2zedu0+kehJoqGctiVI29o6fzry7u4=
-gitlab.com/syntropynet/amberdm/sdk/pubsub-go/pubsub v0.0.0-20230515074233-c6511640c5ed h1:oO216pSeTit1JEFlMintJTfvrmEu6hu1LZ0jpjYXCeI=
-gitlab.com/syntropynet/amberdm/sdk/pubsub-go/pubsub v0.0.0-20230515074233-c6511640c5ed/go.mod h1:PPTFlWhC+akW/HaiucP+ZR4GtHuqvdNDOWGwjq7XllI=
 golang.org/x/crypto v0.8.0 h1:pd9TJtTueMTVQXzk8E2XESSMQDj/U7OUu0PqJqPXQjQ=
 golang.org/x/crypto v0.8.0/go.mod h1:mRqEX+O9/h5TFCrQhkgjo2yKi0yYA+9ecGkdQoHrywE=
 golang.org/x/sys v0.7.0 h1:3jlCCIQZPdOYu1h8BkNvLz8Kgwtae2cagcG/VamtZRU=
