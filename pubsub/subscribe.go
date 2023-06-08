@@ -51,6 +51,14 @@ func (sn *NatsService) subscribe(ctx context.Context, subject string, msgHandler
 				return
 			}
 		})
+	case HandlerRawMsg:
+		return sn.nats.conn.Subscribe(subject, func(msg *nats.Msg) {
+			err := handler(msg)
+			if err != nil {
+				return
+			}
+		})
 	}
+
 	return nil, errors.New("invalid handler function")
 }

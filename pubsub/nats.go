@@ -16,6 +16,7 @@ type NatsService struct {
 // Handler represents a function that takes a byte slice as input and returns an error.
 type Handler func([]byte) error
 type HandlerWithSubject func([]byte, string) error
+type HandlerRawMsg func(*nats.Msg) error
 
 // Config is a struct that holds the configuration settings for connecting to the NATS server.
 type Config struct {
@@ -113,6 +114,14 @@ func (sn *NatsService) AddHandlerWithSubject(subject string, handlerFn HandlerWi
 	}
 
 	// Register the handler function for the given subject
+	sn.nats.handlers[subject] = handlerFn
+}
+
+func (sn *NatsService) AddHandlerRawMsg(subject string, handlerFn HandlerRawMsg) {
+	if _, ok := sn.nats.handlers[subject]; ok {
+		panic(fmt.Errorf("handler with subject %s already registered", subject))
+	}
+
 	sn.nats.handlers[subject] = handlerFn
 }
 
