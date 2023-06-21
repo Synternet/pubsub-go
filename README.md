@@ -82,7 +82,7 @@ For detailed usage examples, please refer to the [examples directory](https://gi
 
 # Contributing
 
-We welcome contributions from the community! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on the [GitHub repository](https://github.com/SyntropyNet/pubsub-go). We appreciate your feedback and collaboration in making this SDK even better.
+We welcome [contributions](./CONTRIBUTING.md) from the community! Please follow our [Code of Conduct](./CODE_OF_CONDUCT.md). If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on the [GitHub repository](https://github.com/SyntropyNet/pubsub-go). We appreciate your feedback and collaboration in making this SDK even better.
 
 # Support
 
