@@ -2,21 +2,21 @@
 
 Welcome to the [Golang SDK ](https://github.com/SyntropyNet/pubsub-go)documentation for the Data Availability Layer. This SDK enables seamless integration with our Data Availability Layer solution, allowing you to harness the power of real-time data streams in your Golang applications. By leveraging the capabilities of the Data Availability Layer, you can unlock new possibilities for data-driven projects and applications.
 
-[syntropy-pubsub-go](https://github.com/SyntropyNet/pubsub-go) is a [Golang library](https://github.com/SyntropyNet/pubsub-go) designed specifically for the Syntropy DataMesh project. With this library, you can effortlessly subscribe to existing data streams or publish new ones. Powered by the NATS messaging system, `[syntropy-pubsub-go](https://github.com/SyntropyNet/pubsub-go)` offers seamless integration between your Golang applications and the Syntropy DataMesh platform.
+[syntropy-pubsub-go](https://github.com/SyntropyNet/pubsub-go) is a [Golang library](https://github.com/SyntropyNet/pubsub-go) designed specifically for the Syntropy Data Availability Layer project. With this library, you can effortlessly subscribe to existing data streams or publish new ones. Powered by the NATS messaging system, `[syntropy-pubsub-go](https://github.com/SyntropyNet/pubsub-go)` offers seamless integration between your Golang applications and the Syntropy Data Availability Layer platform.
 
 # Features
 
-- **Subscribe to Existing Data Streams**: Easily subscribe to pre-existing data streams within the Syntropy DataMesh. Receive real-time updates and harness the power of real-time data insights in your Golang applications.
+- **Subscribe to Existing Data Streams**: Easily subscribe to pre-existing data streams within the Syntropy Data Availability Layer. Receive real-time updates and harness the power of real-time data insights in your Golang applications.
 
-- **Publish New Data Streams**: Create and publish your own data streams directly from your Golang applications. Share data with other participants in the DataMesh, facilitating collaboration and enabling the creation of innovative data-driven solutions.
+- **Publish New Data Streams**: Create and publish your own data streams directly from your Golang applications. Share data with other participants in the Data Availability Layer, facilitating collaboration and enabling the creation of innovative data-driven solutions.
 
 - **Support for JSON Messages**: Leverage the flexibility and interoperability of JSON messages. [syntropy-pubsub-go](https://github.com/SyntropyNet/pubsub-go) provides support for handling JSON data, making it easy to work with complex data structures and seamlessly integrate with other systems and platforms.
 
-- **Customizable Connection Options**: Tailor the connection options to suit your specific needs. Configure parameters such as connection timeouts, retry mechanisms, and authentication details to ensure a secure and reliable connection to the Syntropy DataMesh platform.
+- **Customizable Connection Options**: Tailor the connection options to suit your specific needs. Configure parameters such as connection timeouts, retry mechanisms, and authentication details to ensure a secure and reliable connection to the Syntropy Data Availability Layer platform.
 
-By utilizing the [syntropy-pubsub-go](https://github.com/SyntropyNet/pubsub-go) library, you can unlock the full potential of the Syntropy DataMesh in your Golang applications. Seamlessly integrate with existing data streams, create new ones, and harness the power of real-time data insights to drive innovation and solve complex problems.
+By utilizing the [syntropy-pubsub-go](https://github.com/SyntropyNet/pubsub-go) library, you can unlock the full potential of the Syntropy Data Availability Layer in your Golang applications. Seamlessly integrate with existing data streams, create new ones, and harness the power of real-time data insights to drive innovation and solve complex problems.
 
-Note: Customize the feature list and add more details as necessary, based on the specific capabilities and functionalities of your Golang SDK for the Syntropy DataMesh.
+Note: Customize the feature list and add more details as necessary, based on the specific capabilities and functionalities of your Golang SDK for the Syntropy Data Availability Layer.
 
 # Installation
 
@@ -34,7 +34,7 @@ import "github.com/SyntropyNet/pubsub-go"
 
 # Getting Started
 
-Before you start using the Golang SDK, make sure you have the necessary credentials and access tokens from the SyntropyNet platform. These credentials will allow you to connect to the Data Availability Layer and subscribe to the desired data streams.
+Before you start using the Golang SDK, make sure you have the necessary credentials and access tokens from the Syntropy Developer Portalplatform. These credentials will allow you to connect to the Data Availability Layer and subscribe to the desired data streams.
 
 ## Usage
 
