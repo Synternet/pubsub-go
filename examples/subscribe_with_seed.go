@@ -12,7 +12,7 @@ import (
 
 const (
 	natsUrl                 = "nats://127.0.0.1"
-	accessToken             = "SAAGNJOZTRPYYXG2NJX3ZNGXYUSDYX2BWO447W3SHG6XQ7U66RWHQ3JUXM"
+	accessToken             = "EXAMPLE_ACCESS_TOKEN"
 	exampleSubscribeSubject = "example.sub.subject"
 )
 
