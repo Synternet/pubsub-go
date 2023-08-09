@@ -13,7 +13,7 @@ import (
 const (
 	natsUrl                 = "nats://127.0.0.1:4222"
 	userCredsJWT            = "USER_JWT"
-	accessToken             = "SAAGNJOZTRPYYXG2NJX3ZNGXYUSDYX2BWO447W3SHG6XQ7U66RWHQ3JUXM"
+	accessToken             = "EXAMPLE_ACCESS_TOKEN"
 	exampleSubscribeSubject = "example.sub.subject"
 	examplePublishSubject   = "example.pub.subject"
 )
