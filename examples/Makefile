@@ -1,4 +1,4 @@
-# Define the paths to the source code and build artifacts
+# Define the paths to the source code and build artefacts
 SRC_PATH=.
 DIST_PATH=./dist
 BUILD_PATH=./build
@@ -6,8 +6,8 @@ DOCKERFILE_PROD=$(BUILD_PATH)/Dockerfile
 DOCKERFILE_DEV=$(BUILD_PATH)/Dockerfile.dev
 
 # Define the name of the binary and Docker image
-BINARY_NAME=GoingOn
-DOCKER_IMAGE_NAME=GoingOn
+BINARY_NAME=YourProjectName
+DOCKER_IMAGE_NAME=YourProjectName
 
 # Define the build flags for go build
 BUILD_FLAGS=-ldflags="-s -w"
@@ -62,7 +62,7 @@ docker-build-dev:
 
 .PHONY: clean
 clean:
-	# Remove the build artifacts
+	# Remove the build artefacts
 	rm -rf $(DIST_PATH)
 
 .PHONY: all-tests
