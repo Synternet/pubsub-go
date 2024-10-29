@@ -1,4 +1,4 @@
-module github.com/SyntropyNet/pubsub-go/pubsub
+module github.com/Synternet/pubsub-go/pubsub
 
 go 1.19
 

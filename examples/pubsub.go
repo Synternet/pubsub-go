@@ -2,12 +2,13 @@ package main
 
 import (
 	"context"
-	"github.com/SyntropyNet/pubsub-go/pubsub"
-	"github.com/nats-io/nats.go"
 	"log"
 	"os"
 	"os/signal"
 	"syscall"
+
+	"github.com/Synternet/pubsub-go/pubsub"
+	"github.com/nats-io/nats.go"
 )
 
 const (
