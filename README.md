@@ -2,7 +2,7 @@
 
 Welcome to the [Golang SDK](https://github.com/Synternet/pubsub-go) documentation for the Data Layer. This SDK enables seamless integration with our Data Layer solution, allowing you to harness the power of real-time data streams in your Golang applications. By leveraging the capabilities of the Data Layer, you can unlock new possibilities for data-driven projects and applications.
 
-[synternet pubsub-go](https://github.com/Synternet/pubsub-go) is a [Golang library](https://github.com/Synternet/pubsub-go) designed specifically for the Synternet Data Layer project. With this library, you can effortlessly subscribe to existing data streams or publish new ones. Powered by the NATS messaging system, `[synternet pubsub-go](https://github.com/Synternet/pubsub-go)` offers seamless integration between your Golang applications and the Synternet Data Layer platform.
+[synternet pubsub-go](https://github.com/Synternet/pubsub-go) is a [Golang library](https://github.com/Synternet/pubsub-go) designed specifically for the Synternet Data Layer project. With this library, you can effortlessly subscribe to existing data streams or publish new ones. Powered by the NATS messaging system, [synternet pubsub-go](https://github.com/Synternet/pubsub-go) offers seamless integration between your Golang applications and the Synternet Data Layer platform.
 
 # Features
 
