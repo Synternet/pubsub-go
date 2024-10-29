@@ -1,4 +1,4 @@
-# Code of Conduct - Syntropy PubSub Go
+# Code of Conduct - Synternet PubSub Go
 
 ## Our Pledge
 
