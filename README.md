@@ -2,7 +2,7 @@
 
 Welcome to the [Golang SDK](https://github.com/Synternet/pubsub-go) documentation for the Data Layer. This SDK enables seamless integration with our Data Layer solution, allowing you to harness the power of real-time data streams in your Golang applications. By leveraging the capabilities of the Data Layer, you can unlock new possibilities for data-driven projects and applications.
 
-[synternet pubsub-go](https://github.com/Synternet/pubsub-go) is a [Golang library](https://github.com/Synternet/pubsub-go) designed specifically for the Synternet Data Layer project. With this library, you can effortlessly subscribe to existing data streams or publish new ones. Powered by the NATS messaging system, [synternet pubsub-go](https://github.com/Synternet/pubsub-go) offers seamless integration between your Golang applications and the Synternet Data Layer platform.
+Synternet [pubsub-go](https://github.com/Synternet/pubsub-go) is a [Golang library](https://github.com/Synternet/pubsub-go) designed specifically for the Synternet Data Layer project. With this library, you can effortlessly subscribe to existing data streams or publish new ones. Powered by the NATS messaging system, Synternet [pubsub-go](https://github.com/Synternet/pubsub-go) offers seamless integration between your Golang applications and the Synternet Data Layer platform.
 
 # Features
 
@@ -10,11 +10,11 @@ Welcome to the [Golang SDK](https://github.com/Synternet/pubsub-go) documentatio
 
 - **Publish New Data Streams**: Create and publish your own data streams directly from your Golang applications. Share data with other participants in the Data Layer, facilitating collaboration and enabling the creation of innovative data-driven solutions.
 
-- **Support for JSON Messages**: Leverage the flexibility and interoperability of JSON messages. [synternet pubsub-go](https://github.com/Synternet/pubsub-go) provides support for handling JSON data, making it easy to work with complex data structures and seamlessly integrate with other systems and platforms.
+- **Support for JSON Messages**: Leverage the flexibility and interoperability of JSON messages. Synternet [pubsub-go](https://github.com/Synternet/pubsub-go) provides support for handling JSON data, making it easy to work with complex data structures and seamlessly integrate with other systems and platforms.
 
 - **Customizable Connection Options**: Tailor the connection options to suit your specific needs. Configure parameters such as connection timeouts, retry mechanisms, and authentication details to ensure a secure and reliable connection to the Synternet Data Layer platform.
 
-By utilizing the [synternet pubsub-go](https://github.com/Synternet/pubsub-go) library, you can unlock the full potential of the Synternet Data Layer in your Golang applications. Seamlessly integrate with existing data streams, create new ones, and harness the power of real-time data insights to drive innovation and solve complex problems.
+By utilizing the Synternet [pubsub-go](https://github.com/Synternet/pubsub-go) library, you can unlock the full potential of the Synternet Data Layer in your Golang applications. Seamlessly integrate with existing data streams, create new ones, and harness the power of real-time data insights to drive innovation and solve complex problems.
 
 Note: Customize the feature list and add more details as necessary based on the specific capabilities and functionalities of your Golang SDK for the Synternet Data Layer.
 
