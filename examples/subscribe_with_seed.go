@@ -14,13 +14,13 @@ import (
 const (
 	natsUrl                 = "nats://127.0.0.1"
 	accessToken             = "EXAMPLE_ACCESS_TOKEN"
-	exampleSubscribeSubject = "example.sub.subject"
+	exampleSubscribeSubject = "synternet.example.subject"
 )
 
 // RepublishData receives a message on a given subject and republishes it to another subject.
 // It takes a context, the service instance, and the data (message) as input arguments.
 func PrintData(ctx context.Context, service *pubsub.NatsService, data []byte) error {
-	log.Println("Received message on", exampleSubscribeSubject, "subject")
+	log.Printf("Received message on subject %s: %s\n", exampleSubscribeSubject, string(data))
 	return nil
 }
 

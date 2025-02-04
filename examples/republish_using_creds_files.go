@@ -12,10 +12,11 @@ import (
 )
 
 const (
-	natsUrl                 = "nats://127.0.0.1:4222"
-	natsCredFile            = "./nats.creds"
-	exampleSubscribeSubject = "example.sub.subject"
-	examplePublishSubject   = "example.pub.subject"
+	natsUrl                 = "nats://127.0.0.1"
+	subscriberNatsCredFile  = "./subNats.creds"
+	publisherNatsCredFile	= "./pubNats.creds"
+	exampleSubscribeSubject = "synternet.example.subject"
+	examplePublishSubject   = "publisher.example.subject"
 )
 
 // RepublishData receives a message on a given subject and republishes it to another subject.
@@ -32,24 +33,33 @@ func RepublishData(ctx context.Context, service *pubsub.NatsService, data []byte
 
 func main() {
 	// Set user credentials and options for NATS connection.
-	opts := []nats.Option{}
-	opts = append(opts, nats.UserCredentials(natsCredFile))
+	subOpts := []nats.Option{}
+	subOpts = append(subOpts, nats.UserCredentials(subscriberNatsCredFile))
+	pubOpts := []nats.Option{}
+	pubOpts = append(pubOpts, nats.UserCredentials(publisherNatsCredFile))
 
 	// Connect to the NATS server using the provided options.
-	service := pubsub.MustConnect(
+	pubService := pubsub.MustConnect(
 		pubsub.Config{
 			URI:  natsUrl,
-			Opts: opts,
+			Opts: pubOpts,
 		})
-	log.Println("Connected to NATS server.")
+	log.Println("Publisher connected to NATS server.")
+
+	subService := pubsub.MustConnect(
+		pubsub.Config{
+			URI:  natsUrl,
+			Opts: subOpts,
+		})
+	log.Println("Subscriber connected to NATS server.")
 
 	// Create a context with a cancel function to control the cancellation of ongoing operations.
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 
 	// Add a handler function to process messages received on the exampleSubscribeSubject.
-	service.AddHandler(exampleSubscribeSubject, func(data []byte) error {
-		return RepublishData(ctx, service, data)
+	subService.AddHandler(exampleSubscribeSubject, func(data []byte) error {
+		return RepublishData(ctx, pubService, data)
 	})
 
 	// Set up signal handling to gracefully shut down when receiving SIGINT or SIGTERM signals.
@@ -61,5 +71,5 @@ func main() {
 	}()
 
 	// Start serving messages and processing them using the registered handler function.
-	service.Serve(ctx)
+	subService.Serve(ctx)
 }
